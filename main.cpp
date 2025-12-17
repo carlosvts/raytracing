@@ -33,6 +33,7 @@ int main()
     // Set clock for fps metric
     sf::Clock clock;
 
+    // framerate limit
     window.setFramerateLimit(60);
 
     while(window.isOpen())

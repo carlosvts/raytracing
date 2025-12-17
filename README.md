@@ -19,9 +19,40 @@ The architecture separates the core physics logic (`raytracing`) from the drawin
 
 ## Technologies
 
-* **Language:** C++ (Modern C++)
+* **Language:** C++
 * **Graphics Library:** [SFML](https://www.sfml-dev.org/) (Simple and Fast Multimedia Library)
 * **Build System:** GNU Make
+
+## 🔧 How to Build and Run
+
+### Prerequisites
+
+Before compiling, ensure you have **g++**, **Make**, and the **SFML** library installed.
+
+#### Linux Dependencies
+
+* **Debian / Ubuntu / Pop!_OS:**
+    ```bash
+    sudo apt-get install libsfml-dev g++ make
+    ```
+
+* **Arch Linux:**
+    ```bash
+    sudo pacman -S sfml base-devel
+    ```
+
+* **Fedora:**
+    ```bash
+    sudo dnf install SFML-devel gcc-c++ make
+    ```
+
+### Compiling
+
+This project uses a `Makefile` for easy compilation. Open your terminal in the project folder and run:
+
+```bash
+make
+
 
 ## File Structure
 

@@ -28,6 +28,8 @@ Hit calculateCricleIntersection(Ray ray, Circle circle)
     // needs to evaluate everything as if the circle was in the origin
     sf::Vector2f localOrigin = ray.origin - circle.centre;
 
+    Hit hit;
+
     // solving the quadratic equation
     // first we evalute a, b, c
     float a = dot(ray.direction, ray.direction);
@@ -39,7 +41,6 @@ Hit calculateCricleIntersection(Ray ray, Circle circle)
     if (discriminant < 0)
     {
         // didnt hit the circle
-        Hit hit;
         hit.distance = -1;
         return hit;
     }
@@ -49,7 +50,6 @@ Hit calculateCricleIntersection(Ray ray, Circle circle)
         // now actually solving the equation
         // -b +- sqrt(discriminant) /2a; we want only the negative since its the first that will hit
         // scalar t
-        Hit hit;
         float t = (-b - sqrtf32(discriminant)) / (2.0f * a);
         if (t < 0)
         {
@@ -64,6 +64,9 @@ Hit calculateCricleIntersection(Ray ray, Circle circle)
         // Calculating the normal point where the hit tangentiate the circle
         sf::Vector2f normal = hit.point - circle.centre;
         hit.angle = atan2(normal.y, normal.x);
+        hit.distance = t;
         return hit;
     }
+    hit.distance = -1;
+    return hit;
 }

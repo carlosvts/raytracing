@@ -34,4 +34,8 @@ struct Hit
     float angle;
 };
 
+float dot(sf::Vector2f origin, sf::Vector2f destination);
+sf::Vector2f normalize(sf::Vector2f vector);
+Hit calculateCricleIntersection(Ray ray, Circle circle);
+
 #endif

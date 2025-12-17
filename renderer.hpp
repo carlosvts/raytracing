@@ -3,13 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 
-class Renderer
+struct Renderer
 {
-    private:
-
-    public:
-        Renderer();
-
-        void Renderer::Render(sf::RenderWindow& window, const std::vector<sf::CircleShape>& circleObstacles);
+    void Render(sf::RenderWindow& window, sf::Mouse& mouse, const std::vector<sf::CircleShape>& circleObstacles);
 };
 #endif

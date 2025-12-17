@@ -1,10 +1,14 @@
 # 2D Raytracing Engine in C++
 
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![SFML](https://img.shields.io/badge/SFML-8CC449?style=for-the-badge&logo=sfml&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
 A 2D Raytracing engine developed in C++ using the SFML graphics library. This project was created for educational purposes to explore rendering concepts, computational geometry, and light simulation.
 
 ## Screenshots
 
-![Project Demo](TODO)
+![TODO](TODO)
 
 ## About the Project
 

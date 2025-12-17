@@ -52,7 +52,7 @@ This project uses a `Makefile` for easy compilation. Open your terminal in the p
 
 ```bash
 make
-
+```
 
 ## File Structure
 
@@ -68,3 +68,4 @@ The source code is organized as follows:
 ├── 📄 Makefile              # Automated build script
 ├── 📄 UniverseCondensed.ttf # Font used for UI/Debug text | You can use another one (just make sure you change in the main.cpp file)
 └── 📄 .gitignore
+```

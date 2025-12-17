@@ -23,7 +23,7 @@ The architecture separates the core physics logic (`raytracing`) from the drawin
 * **Graphics Library:** [SFML](https://www.sfml-dev.org/) (Simple and Fast Multimedia Library)
 * **Build System:** GNU Make
 
-## 🔧 How to Build and Run
+## How to Build and Run
 
 ### Prerequisites
 

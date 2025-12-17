@@ -12,7 +12,7 @@ void Renderer::Render(sf::RenderWindow& window, sf::Mouse& mouse, const std::vec
     float lightRadius = 600.f;
 
     // Adding a gradient color for aesthetical reasons
-    sf::Color centerColor = sf::Color(255, 248, 235, 255); // Purest white possible
+    sf::Color centerColor = sf::Color(255, 248, 235, 255); // White
     sf::Color baseColor = sf::Color(255, 200, 120); // yellowish color WITHOUT alpha
 
     // adds the mouse position to the trianglefan

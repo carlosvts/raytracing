@@ -1,4 +1,4 @@
-# 2D Raytracing Engine in C++
+# 2D Raytracing Engine in C++ & SFML
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![SFML](https://img.shields.io/badge/SFML-8CC449?style=for-the-badge&logo=sfml&logoColor=white)

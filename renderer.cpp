@@ -9,7 +9,7 @@ void Renderer::Render(sf::RenderWindow& window, sf::Mouse& mouse, const std::vec
     sf::VertexArray triangles(sf::TriangleFan);
     sf::Vector2f mousePos = static_cast<sf::Vector2f>(mouse.getPosition(window));
 
-    float lightRadius = 600.f;
+    float lightRadius = 400.f;
 
     // Adding a gradient color for aesthetical reasons
     sf::Color centerColor = sf::Color(255, 248, 235, 255); // White

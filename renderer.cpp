@@ -9,10 +9,14 @@ void Renderer::Render(sf::RenderWindow& window, sf::Mouse& mouse, const std::vec
     sf::VertexArray triangles(sf::TriangleFan);
     sf::Vector2f mousePos = static_cast<sf::Vector2f>(mouse.getPosition(window));
 
+    float lightRadius = 600.f;
 
+    // Adding a gradient color for aesthetical reasons
+    sf::Color centerColor = sf::Color(255, 248, 235, 255); // Purest white possible
+    sf::Color baseColor = sf::Color(255, 200, 120); // yellowish color WITHOUT alpha
 
     // adds the mouse position to the trianglefan
-    triangles.append(mousePos);
+    triangles.append(sf::Vertex(mousePos, centerColor));
     
     sf::Vector2f finalPos;
 
@@ -22,7 +26,7 @@ void Renderer::Render(sf::RenderWindow& window, sf::Mouse& mouse, const std::vec
     for(float theta = 0.0f; theta <= 2.0f*M_PI ; theta += thetaIncrease)
     {
         // min distance
-        float minDistance = 10000.0f;
+        float minDistance = lightRadius;
         bool hitSomething {false};
 
         // for radius = 1, this equation is true
@@ -54,11 +58,20 @@ void Renderer::Render(sf::RenderWindow& window, sf::Mouse& mouse, const std::vec
             }
         }
 
+        // To apply the gradient effect only to the radius of the light
+        float factor = minDistance / lightRadius; // Factor of distance that traveled until hit an object (or not)
+        float intensity = 1.0f - factor; // get intensity of light
+        if (intensity <= 0.0f) { intensity = 0.0f; }
+        sf::Uint8 alpha = static_cast<sf::Uint8>(255 * intensity);
+
         if (!hitSomething)
         {
+            minDistance = lightRadius;
             finalPos = ray.origin + (ray.direction * minDistance);
         }
-        triangles.append(finalPos);
+        // applying alpha here
+        sf::Color colorWithGradient = sf::Color(baseColor.r, baseColor.g, baseColor.b, alpha);
+        triangles.append(sf::Vertex(finalPos, colorWithGradient));
     }
     window.draw(triangles);
 }

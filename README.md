@@ -13,7 +13,7 @@ A 2D Raytracing engine developed in C++ using the SFML graphics library. This pr
 ## About the Project
 
 This project implements a real-time ray casting/tracing system. The goal is to simulate the interaction of "light" or field of view with geometric obstacles in a 2D environment.
-Main objective: understand more about ray casting and computer graphics while enhancing C++ skills
+Main objective: understand more about ray casting and computer graphics while enhancing C++ skills.
 
 The architecture separates the core physics logic (`raytracing`) from the drawing logic (`renderer`), ensuring modular and maintainable code.
 

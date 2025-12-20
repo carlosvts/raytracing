@@ -28,6 +28,7 @@ The architecture separates the core physics logic (`raytracing`) from the drawin
 ### Prerequisites
 
 Before compiling, ensure you have **g++**, **Make**, and the **SFML** library installed.
+Link for SFML instalation guide [here](https://www.sfml-dev.org/download/)
 
 #### Linux Dependencies
 

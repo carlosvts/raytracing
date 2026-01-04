@@ -8,7 +8,7 @@ A 2D Raytracing engine developed in C++ using the SFML graphics library. This pr
 
 ## Screenshots
 
-![TODO](TODO)
+![TODO](assets/raytracerexample.png)
 
 ## About the Project
 
